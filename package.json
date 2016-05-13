@@ -4,8 +4,8 @@
   "description": "lowdb indexedDB storage",
   "main": "lib/index.js",
   "scripts": {
-    "test": "mocha",
-    "test:watch": "mocha --compilers js:babel-register --recursive --watch src/**/__test__/*.js",
+    "test": "karma start --single-run",
+    "test:watch": "karma start",
     "build:lib": "babel src --ignore src/__test__ --out-dir lib "
   },
   "repository": {
@@ -22,14 +22,24 @@
     "url": "https://github.com/eyasliu/lowdb-indexedDB/issues"
   },
   "homepage": "https://github.com/eyasliu/lowdb-indexedDB#readme",
-  "dependencies": {},
+  "dependencies": {
+    "lowdb": "^0.12.5"
+  },
   "devDependencies": {
     "babel-cli": "^6.8.0",
+    "babel-loader": "^6.2.4",
     "babel-preset-es2015": "^6.6.0",
     "babel-preset-stage-0": "^6.5.0",
     "babel-register": "^6.8.0",
-    "lowdb": "^0.12.5",
+    "chai": "^3.5.0",
+    "karma": "^0.13.22",
+    "karma-babel-preprocessor": "^6.0.1",
+    "karma-chai": "^0.1.0",
+    "karma-chrome-launcher": "^1.0.1",
+    "karma-mocha": "^1.0.1",
+    "karma-webpack": "^1.7.0",
     "mocha": "^2.4.5",
-    "should": "^8.3.1"
+    "should": "^8.3.1",
+    "webpack": "^1.13.0"
   }
 }
