@@ -1,4 +1,9 @@
-import should from 'should';
+import DB from '../db';
+
+
+// just test
+window.DB = DB;
+window.idb = new DB;
 
 describe('datebase', () => {
   it('create datebase', () => {
