@@ -4,7 +4,7 @@ const config = {
   resolve: {
     extensions: ['', '.js']
   },
-  devtool: 'inline-source-map',
+  devtool: 'eval',
   module: {
     loaders: [
       {

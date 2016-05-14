@@ -1,9 +1,23 @@
+import low from 'lowdb';
+import indexeddbStorage from '../index';
+
 describe('lowdb storage', () => {
-  it('read database', () => {
-    
+  let db = low('testDB', {storage: indexeddbStorage})
+  window.db = db;
+
+
+  
+  it('write datebase', () => {
+    db('post').push({
+      title: 'test title',
+      content: 'test content'
+    });
   })
 
-  it('write datebase', () => {
-    
+  it('read database', () => {
+    db('post').find({
+      id: 1
+    })
   })
+
 })
